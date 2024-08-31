@@ -12,7 +12,7 @@ const app = new App({
   signingSecret: process.env.SIGN_SECRET,
 });
 
-const channelId = procsess.env.CHANNEL;    
+const channelId = process.env.CHANNEL;    
 
 
 
@@ -26,13 +26,13 @@ const PORT = 3001;
 
 
 // Middleware to parse JSON bodies
-app.use(express.json());
+app1.use(express.json());
 
 
 
 
 // Route to handle POST requests
-app.post('/slack', async (req, res) => {
+app1.post('/slack', async (req, res) => {
   const data = req.body;
   //const { counter } = req.body;
 
@@ -54,7 +54,7 @@ app.post('/slack', async (req, res) => {
   if (data.action === 'talk') {
     //console.log('Starting process...');
     // Code to start a process
-    await app1.client.chat.postMessage({
+    await app.client.chat.postMessage({
       token: process.env.O_AUTH,
       channel: channelId,
       "blocks": [
