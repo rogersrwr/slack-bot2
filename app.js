@@ -22,7 +22,7 @@ console.log(' app is running??');
 
 
 const app1 = express();
-const PORT = 3001;
+const PORT = 4001;
 
 
 // Middleware to parse JSON bodies
@@ -106,7 +106,7 @@ app1.post('/slack', async (req, res) => {
 
 
 //Create HTTP server
-app.listen(PORT, () => {
+app1.listen(PORT, () => {
   console.log(`HTTP server running on port ${PORT}`);
 });
 
