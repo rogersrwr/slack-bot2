@@ -16,7 +16,7 @@ const channelId = procsess.env.CHANNEL;
 
 
 
-await app.start(process.env.PORT || 3002 );
+
 console.log(' app is running??');
 
 
@@ -43,6 +43,7 @@ app.post('/slack', async (req, res) => {
   // For example:
   if (data.action === 'start') {
       console.log('Starting process...');
+      await app.start(process.env.PORT || 3002 );
       // Code to start a process
   } else if (data.action === 'stop') {
       console.log('Stopping process...');
