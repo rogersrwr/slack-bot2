@@ -9,7 +9,7 @@ require('dotenv').config();
 
 const app = new App({ 
   token: process.env.O_AUTH,
-  signingSecret: process.env.SIGN_SECRET,
+  signingSecret: process.env.SIGN_SECRET
 });
 
 const channelId = process.env.CHANNEL;    
